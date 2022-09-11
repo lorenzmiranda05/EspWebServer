@@ -18,7 +18,6 @@ void setup()
 
 void loop()
 {
-  ArduinoOTA.handle();
   if (wm.run() != WL_CONNECTED)
   {
     serialAndTelnetPrintln("WiFi not connected!");
@@ -26,6 +25,7 @@ void loop()
   }
   if (wm.run() == WL_CONNECTED)
   {
+    ArduinoOTA.handle();
     if (broadcastDeviceDetails == 0)
     {
       server.handleClient();
@@ -49,8 +49,7 @@ void loop()
       serialAndTelnetPrintln(WiFi.macAddress());
       serialAndTelnetPrint("IP Address: ");
       serialAndTelnetPrintln(WiFi.localIP());
-      serialAndTelnetPrint("Web Server: ");
-      serialAndTelnetPrintln("OFF");
+      serialAndTelnetPrintln("Web Server: OFF");
       delay(5000);
     }
   }
