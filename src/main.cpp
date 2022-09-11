@@ -8,6 +8,12 @@ void setup()
   delay(10);
   loadConfigFile();
   setupOTA();
+  pinMode(0, OUTPUT);
+  server.on("/", handle_OnConnect);
+  server.on("/ledon", handle_ledon);
+  server.on("/ledoff", handle_ledoff);
+  server.onNotFound(handle_NotFound);
+  server.begin();
 }
 
 void loop()
@@ -28,5 +34,14 @@ void loop()
     serialAndTelnetPrint("IP Address ");
     serialAndTelnetPrintln(WiFi.localIP());
     delay(5000);
+  }
+  server.handleClient();
+  if (pinStatus)
+  {
+    digitalWrite(0, HIGH);
+  }
+  else
+  {
+    digitalWrite(0, LOW);
   }
 }

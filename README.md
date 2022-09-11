@@ -52,6 +52,10 @@ Template to be used for ESP8266-based boards with small flash memory.
 <br  />
 |&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|-- ESP8266WiFi @ 1.0
 <br  />
+|&nbsp; &nbsp; &nbsp;|-- ESP8266WebServer @ 1.0
+<br  />
+|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|-- ESP8266WiFi @ 1.0
+<br  />
 |&nbsp; &nbsp; &nbsp;|-- ESP8266WiFi @ 1.0
 <br  />
 |&nbsp; &nbsp; &nbsp;|-- LittleFS @ 0.1.0
@@ -72,3 +76,4 @@ Template to be used for ESP8266-based boards with small flash memory.
 * [x] Use WiFi credentials from File System
 * [x] Update embedded program using ArduinoOTA.h
 * [x] Print to serial and telnet streams
+* [x] Control the output of GPIO 0 via a website hosted with ESP8266WebServer.h
