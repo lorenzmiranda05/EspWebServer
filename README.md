@@ -1,5 +1,5 @@
 ### **ESP Web Server**
-Template to be used for ESP8266-based boards with small flash memory.
+Hosting a web site in the ESP8266 platform to control a GPIO pin output state
 
 ---
 <br  />
@@ -91,7 +91,18 @@ Template to be used for ESP8266-based boards with small flash memory.
 1. Not Found
 
     ![github](https://raw.githubusercontent.com/lorenzmiranda05/EspWebServer/main/Assets/Image/Website/04NotFound.png)
+<br  />
 
+---
+<br  />
+
+**Reference**
+1. [Build a Webserver on NodeMCU ESP8266 in Station Mode][BINARY UPDATES] of BINARY UPDATES YouTube channel
+    * [Github Link][BINARY UPDATES GITHUB]
+
+<br  />
+
+---
 <br  />
 
 **Tasks**
@@ -100,3 +111,10 @@ Template to be used for ESP8266-based boards with small flash memory.
 * [x] Update embedded program using ArduinoOTA.h
 * [x] Print to serial and telnet streams
 * [x] Control the output of GPIO 0 via a website hosted with ESP8266WebServer.h
+
+<!-- Reusable and Invisible URL Definitions  -->
+[Github Link]: https://github.com/lorenzmiranda05/Esp8266LiteTemplate
+
+[BINARY UPDATES]: https://www.youtube.com/watch?v=pqaaPSRiYec
+
+[BINARY UPDATES GITHUB]: https://github.com/binaryupdates/NodeMCU-Webserver-Station-Mode
