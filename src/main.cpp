@@ -26,22 +26,32 @@ void loop()
   }
   if (wm.run() == WL_CONNECTED)
   {
-    serialAndTelnetPrintln("");
-    serialAndTelnetPrint("Connected to ");
-    serialAndTelnetPrintln(WiFi.SSID());
-    serialAndTelnetPrint("Device Name ");
-    serialAndTelnetPrintln(espName);
-    serialAndTelnetPrint("IP Address ");
-    serialAndTelnetPrintln(WiFi.localIP());
-    delay(5000);
-  }
-  server.handleClient();
-  if (pinStatus)
-  {
-    digitalWrite(0, HIGH);
-  }
-  else
-  {
-    digitalWrite(0, LOW);
+    if (broadcastDeviceDetails == 0)
+    {
+      server.handleClient();
+      if (pinStatus)
+      {
+        digitalWrite(0, HIGH);
+      }
+      else
+      {
+        digitalWrite(0, LOW);
+      }
+    }
+    else
+    {
+      serialAndTelnetPrintln("");
+      serialAndTelnetPrint("Device Name: ");
+      serialAndTelnetPrintln(espName);
+      serialAndTelnetPrint("WiFi Connection: ");
+      serialAndTelnetPrintln(WiFi.SSID());
+      serialAndTelnetPrint("MAC Address: ");
+      serialAndTelnetPrintln(WiFi.macAddress());
+      serialAndTelnetPrint("IP Address: ");
+      serialAndTelnetPrintln(WiFi.localIP());
+      serialAndTelnetPrint("Web Server: ");
+      serialAndTelnetPrintln("OFF");
+      delay(5000);
+    }
   }
 }
