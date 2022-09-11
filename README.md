@@ -1,4 +1,4 @@
-### **ESP8266 Lite Template**
+### **ESP Web Server**
 Template to be used for ESP8266-based boards with small flash memory.
 
 ---
@@ -26,6 +26,9 @@ Template to be used for ESP8266-based boards with small flash memory.
     }
     ```
 
+<br  />
+
+---
 <br  />
 
 **Dependency Graph**
@@ -68,6 +71,26 @@ Template to be used for ESP8266-based boards with small flash memory.
 <br  />
 |&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;|-- SPI @ 1.0
 <br  />
+
+---
+<br  />
+
+**Web Site**
+1. Landing Page
+
+    ![github](https://raw.githubusercontent.com/lorenzmiranda05/EspWebServer/main/Assets/Image/Website/01LandingPage.png)
+
+1. LED ON
+
+    ![github](https://raw.githubusercontent.com/lorenzmiranda05/EspWebServer/main/Assets/Image/Website/02LedOn.png)
+
+1. LED OFF
+
+    ![github](https://raw.githubusercontent.com/lorenzmiranda05/EspWebServer/main/Assets/Image/Website/03LedOff.png)
+
+1. Not Found
+
+    ![github](https://raw.githubusercontent.com/lorenzmiranda05/EspWebServer/main/Assets/Image/Website/04NotFound.png)
 
 <br  />
 
