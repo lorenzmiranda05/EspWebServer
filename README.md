@@ -9,6 +9,8 @@ Hosting a web site in the ESP8266 platform to control a GPIO pin output state
     ```
     {
         "deviceType" : "ESP01",
+        "broadcastDeviceDetails" : 0,
+        "ipAddress" : [192, 168, 1, 70],
         "accessPoint" : [
                             {
                                 "ssid": "WiFi1",

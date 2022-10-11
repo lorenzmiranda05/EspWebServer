@@ -97,7 +97,10 @@ bool loadConfigFile()
                 wm.addAP(json["accessPoint"][0]["ssid"], json["accessPoint"][0]["password"]);
                 wm.addAP(json["accessPoint"][1]["ssid"], json["accessPoint"][1]["password"]);
                 wm.addAP(json["accessPoint"][2]["ssid"], json["accessPoint"][2]["password"]);
-
+                IPAddress gateway(192, 168, 1, 1);
+                IPAddress subnet(255, 255, 0, 0);
+                IPAddress local_IP(json["ipAddress"][0].as<int>(), json["ipAddress"][1].as<int>(), json["ipAddress"][2].as<int>(), json["ipAddress"][3].as<int>());
+                WiFi.config(local_IP, gateway, subnet);
                 return true;
             }
             else
@@ -167,8 +170,8 @@ String updateWebpage(uint8_t ledStatus)
     ptr += "</style>\n";
     ptr += "</head>\n";
     ptr += "<body>\n";
-    ptr += "<h1>ESP8266 Web Server</h1>\n";
-    ptr += "<h3>Using Station(STA) Mode</h3>\n";
+    ptr += "<h1>ESP Web Server</h1>\n";
+    ptr += "<h3>Third Floor</h3>\n";
 
     if (ledStatus)
     {
